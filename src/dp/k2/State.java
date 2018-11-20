@@ -13,7 +13,7 @@ class State {
 
     // Construct a Kalah board of arbitrary size
     //
-    State(int houseCount, int seedCount) {
+    State(final int houseCount, final int seedCount) {
         this.houseCount = houseCount;
         this.seedCount = seedCount;
         this.northEndZone = new House(0, true, true);
@@ -30,7 +30,7 @@ class State {
 
     // Copy Constructor
     //
-    private State(State s) {
+    private State(final State s) {
         this.houseCount = s.houseCount;
         this.seedCount = s.seedCount;
         this.northEndZone = new House(s.northEndZone);
@@ -77,7 +77,7 @@ class State {
 
     boolean isAnotherTurn() {return this.anotherTurn;}
 
-    State applyMove(int house, boolean isNorth) {
+    State applyMove(final int house, final boolean isNorth) {
         State newState = new State(this);
         int count;
         House currentHouse;

@@ -8,14 +8,14 @@ public class Main {
     private static final int DEFAULT_HOUSE_COUNT = 6;
     private static final int DEFAULT_SEED_COUNT = 4;
 
-    private static State humanTurn(State s, boolean isNorth) {
+    private static State humanTurn(final State s, final boolean isNorth) {
         System.out.println("Human is playing " + (isNorth ? "North" : "South"));
         Scanner scan = new Scanner(System.in);
         int move = scan.nextInt();
         return s.applyMove(move, isNorth);
     }
 
-    private static State computerTurn(State s, boolean isNorth) {
+    private static State computerTurn(final State s, final boolean isNorth) {
         System.out.println("Computer is playing " + (isNorth ? "North" : "South"));
         int move = Analyze.analyze(s, isNorth);
         System.out.println("Computer plays " + move);

@@ -1,7 +1,7 @@
 package dp.k2;
 
 class Analyze {
-    static int analyze(State s, boolean isNorth) {
+    static int analyze(final State s, final boolean isNorth) {
         State[] newState = new State[s.getHouseCount()];
         House[] currentHouses = isNorth ? s.getNorthHouses() : s.getSouthHouses();
 

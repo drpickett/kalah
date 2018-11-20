@@ -7,7 +7,7 @@ class House {
     private House next;
     private House opposite;
 
-    House(int count, boolean isEndZone, boolean isNorth) {
+    House(final int count, final boolean isEndZone, final boolean isNorth) {
         this.count = count;
         this.isEndZone = isEndZone;
         this.isNorth = isNorth;
@@ -15,7 +15,7 @@ class House {
         this.opposite = null;
     }
 
-    House(House h) {
+    House(final House h) {
         this.count = h.count;
         this.isEndZone = h.isEndZone;
         this.isNorth = h.isNorth;
@@ -35,7 +35,7 @@ class House {
 
     void setCount(int c) { this.count = c; }
 
-    void setNext(House h) { this.next = h; }
+    void setNext(final House h) { this.next = h; }
 
-    void setOpposite(House h) { this.opposite = h; }
+    void setOpposite(final House h) { this.opposite = h; }
 }

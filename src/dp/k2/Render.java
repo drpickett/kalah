@@ -2,7 +2,7 @@ package dp.k2;
 
 class Render {
     
-    private static String renderFrame(State s) {
+    private static String renderFrame(final State s) {
         StringBuilder ret = new StringBuilder();
         ret.append("+----+----");
         for(int i=0; i< s.getHouseCount(); i++) {
@@ -12,7 +12,7 @@ class Render {
         return ret.toString();
     }
 
-    private static String renderHeader(State s) {
+    private static String renderHeader(final State s) {
         StringBuilder ret = new StringBuilder();
         ret.append("       ");
         for(int i=s.getHouseCount() - 1; i >= 0; i--) {
@@ -22,7 +22,7 @@ class Render {
         return ret.toString();
     }
 
-    private static String renderNorth(State s) {
+    private static String renderNorth(final State s) {
         StringBuilder ret = new StringBuilder();
         ret.append(String.format("| %02d ", s.getNorthEndZone().getCount()));
         for(int i=s.getHouseCount() - 1; i >=0 ; i--) {
@@ -32,7 +32,7 @@ class Render {
         return ret.toString();
     }
 
-    private static String renderSouth(State s) {
+    private static String renderSouth(final State s) {
         StringBuilder ret = new StringBuilder();
         ret.append("|    ");
         for(int i=0; i< s.getHouseCount(); i++) {
@@ -42,7 +42,7 @@ class Render {
         return ret.toString();
     }
 
-    private static String renderFooter(State s) {
+    private static String renderFooter(final State s) {
         StringBuilder ret = new StringBuilder();
         ret.append("       ");
         for(int i=0; i< s.getHouseCount(); i++) {
@@ -52,7 +52,7 @@ class Render {
         return ret.toString();
     }
 
-    static String renderText(State s) {
+    static String renderText(final State s) {
         String ret = "";
         ret += renderHeader(s);
         ret += renderFrame(s);
